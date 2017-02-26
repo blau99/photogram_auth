@@ -9,15 +9,13 @@
       <tr>
         <th>Caption</th>
         <th>Image</th>
-        <th>User</th>
         <th>Actions</th>
       </tr>
 
       <% @photos.each do |photo| %>
       <tr>
         <td><%= photo.caption %></td>
-        <td><%= photo.image %></td>
-        <td><%= photo.user_id %></td>
+        <td><img src="<%= photo.image %>" width="250"></td>
         <td>
           <a href="/photos/<%= photo.id %>" class="btn btn-primary">Show</a>
           <a href="/photos/<%= photo.id %>/edit" class="btn btn-warning">Edit</a>
@@ -31,10 +29,10 @@
       <a href="/users" class="btn btn-primary">
         Back
       </a>
-      <a href="/users/<%= @photo.id %>/edit" class="btn btn-warning">
+      <a href="/users/<%= @user.id %>/edit" class="btn btn-warning">
         Edit
       </a>
-      <a href="/delete_photo/<%= @photo.id %>" class="btn btn-danger" rel="nofollow">
+      <a href="/delete_user/<%= @user.id %>" class="btn btn-danger" rel="nofollow">
         Delete
       </a>
     </div>
