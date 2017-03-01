@@ -31,6 +31,8 @@ Rails.application.routes.draw do
 
   # DELETE
   get "/delete_like/:id", :controller => "likes", :action => "destroy"
+
+
   #------------------------------
 
   root "photos#index"
@@ -62,5 +64,8 @@ Rails.application.routes.draw do
 
   get "/delete_user/:id", :controller => "users", :action => "destroy"
 
+  get "/users/my_wall", :controller => "users", :action => "mywall"
+
+  get "/my_likes", :controller => "users", :action => "mylikes"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
